@@ -30,3 +30,12 @@ gen_cocktail = Object.keys(cocktail)[(Math.floor(Math.random() * Object.values(c
 gen_dessert  = Object.keys(Dessert)[Math.floor(Math.random() *Object.values(Dessert).length)];
 totalBill = maincourse[gen_maincourse] + cocktail[gen_cocktail] +Dessert[gen_dessert];
 }
+const displayMessage = () => {
+    console.log("Hello! Would You Like to try 'Today's Special Meal ?'");
+    console.log(`Maincourse: ${gen_maincourse} \t\t\tPrice: ${maincourse[gen_maincourse]}`);
+    console.log(`Cocktail: ${gen_cocktail} \t\t\tPrice: ${cocktail[gen_cocktail]}`);
+    console.log(`Dessert: ${gen_dessert} \t\t\tPrice: ${Dessert[gen_dessert]}\n`);
+    console.log(`Total Amount to be Paid: $${totalBill}`)
+}
+getRandomDishes();
+displayMessage();
