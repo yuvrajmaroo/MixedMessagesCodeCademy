@@ -23,3 +23,10 @@ const Dessert = {
     "Chocolate Ganache":150,
     "Butterscotch Sundae":120,
 }
+let gen_maincourse,gen_cocktail,gen_dessert,totalBill;
+const getRandomDishes =()=>{
+gen_maincourse = Object.keys(maincourse)[Math.floor(Math.random() * Object.values(maincourse).length)];
+gen_cocktail = Object.keys(cocktail)[(Math.floor(Math.random() * Object.values(cocktail).length))];
+gen_dessert  = Object.keys(Dessert)[Math.floor(Math.random() *Object.values(Dessert).length)];
+totalBill = maincourse[gen_maincourse] + cocktail[gen_cocktail] +Dessert[gen_dessert];
+}
